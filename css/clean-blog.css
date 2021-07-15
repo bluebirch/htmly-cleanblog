@@ -47,6 +47,26 @@ blockquote {
   color: #808080;
   font-style: italic;
 }
+dt {
+  float: left;
+  width: 6em;
+  font-weight: normal;
+}
+dd {
+  margin-left: 6em;
+}
+/*
+dd p {
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+dd p+p, dd ul {
+  margin-top: .2em;
+  margin-bottom: .2em;
+  font-size: 80%;
+  font-style: italic;
+}
+*/
 hr.small {
   max-width: 100px;
   margin: 15px auto;
