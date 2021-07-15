@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!-- Main Content -->
 <div class="container">
     <div class="row">
@@ -19,7 +20,7 @@
                         <?php echo $p->title; ?>
                     </h2>
                 </a>
-                <p class="post-meta">Posted in <?php echo $p->category; ?> by <a href="<?php echo $p->authorUrl; ?>"><?php echo $p->author; ?></a> on <?php echo date('F d, Y', $p->date) ?></p>
+                <p class="post-meta">Posted in <?php echo $p->category; ?> by <a href="<?php echo $p->authorUrl; ?>"><?php echo $p->authorName; ?></a> on <?php echo format_date($p->date); ?></p>
                 <?php echo get_teaser($p->body, $p->url); ?>
             </div>
             <hr>

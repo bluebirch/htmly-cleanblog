@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!-- Post Content -->
 <article>
     <div class="container">
@@ -7,19 +8,10 @@
                 <h3>Posts by this author</h3>
                 <?php if (!empty($posts)) { ?>
                     <ul class="post-list">
-                        <?php $i = 0; $len = count($posts); ?>
                         <?php foreach ($posts as $p): ?>
-                            <?php if ($i == 0) {
-                                $class = 'item first';
-                            } elseif ($i == $len - 1) {
-                                $class = 'item last';
-                            } else {
-                                $class = 'item';
-                            }
-                            $i++; ?>
-                            <li class="<?php echo $class; ?>">
+                            <li class="item">
                                 <span><a href="<?php echo $p->url ?>"><?php echo $p->title ?></a></span> on
-                                <span><?php echo date('d F Y', $p->date) ?></span> - Posted in <span><?php echo $p->category ?></span>
+                                <span><?php echo format_date($p->date); ?></span> - Posted in <span><?php echo $p->category ?></span>
                             </li>
                         <?php endforeach; ?>
                     </ul>
